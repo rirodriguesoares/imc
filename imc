@@ -1,0 +1,48 @@
+#-*- coding: utf-8 -*-
+'''
+
+Programa que cáucula o IMC de uma pessoa
+Program that calculates a person's BMI
+
+By: Ricardo Rodrigues
+Phone: +55 11 95593 9797
+E-mail: ri.rodriguesoares@gmail.com / rcddigital.it@gmail.com
+'''
+
+print('---------Cálculo de IMC (Indice massa Corporal)----------\n')
+
+sair = False
+
+while sair == False:
+
+	nome = input('Escreva seu nome: \n')
+	idade = input('Qual é sua Idade: \n')
+	peso = int(input('Qual é seu peso:  \n'))
+	altura = float(input('Qual é sua altura: separando com ponto, exemplo 1.88 \n'))
+	imc = peso / (altura * altura)
+	print('Bem-vindo',nome,'você tem', idade,'anos,' 
+		'pesa', peso, 'kilos e tem', altura, 'de altura.')
+	print('----------É um prazer tê-lo conosco----------\n\n')
+	print('-----Seu indice de massa corporal  é {:.2f}-----\n'.format(imc))
+
+	if imc < 16:
+		print('        Você tem Magreza grave\n\n\n\n')
+	elif imc < 17:
+		print("        Você tem Magreza moderada\n\n\n\n")
+	elif imc < 18.5:
+		print('        Você tem Magreza Leve\n\n\n\n')
+	elif imc < 25:
+		print('        Vocês é Saudavel, continue assim\n\n\n\n')
+	elif imc < 30:
+		print('        Vocês tem Sobrepeso\n\n\n\n')
+	elif imc < 35:
+		print('        Vocês tem Obesidade grau I\n\n\n\n')
+	elif imc < 40:
+		print('        Vocês tem Obesidade grau II (severa)\n\n\n\n')
+	else:
+		print('        Vocês tem Obesidade Grau III (mórbida)\n\n\n\n')
+
+	teste = input ('Deseja sair? (n/s): ')
+	if teste == "s":
+		sair = True
+
